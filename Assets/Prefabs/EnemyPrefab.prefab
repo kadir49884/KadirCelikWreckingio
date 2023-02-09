@@ -3029,10 +3029,10 @@ CapsuleCollider:
   m_Material: {fileID: 13400000, guid: 38e115a175ecdb24481f4a3bc4363ed5, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.3350854
+  m_Radius: 0.17081892
   m_Height: 1.7097771
   m_Direction: 2
-  m_Center: {x: 0.029039025, y: 0.8121505, z: -0.12629497}
+  m_Center: {x: 0.029039025, y: 0.647884, z: -0.12629497}
 --- !u!65 &8142134304348043900
 BoxCollider:
   m_ObjectHideFlags: 0
