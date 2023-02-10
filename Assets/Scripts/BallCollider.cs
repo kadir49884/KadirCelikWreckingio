@@ -52,7 +52,6 @@ public class BallCollider : MonoBehaviour
 
     }
 
-
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.transform.TryGetComponent(out EnemyController enemyController) && enemyController != globalEnemyController)
