@@ -68,7 +68,6 @@ public class BallController : MonoBehaviour
     }
 
 
-
     public void CollisionDropBox(bool isGolden)
     {
         lineRendererGameObject.SetActive(false);
@@ -79,7 +78,6 @@ public class BallController : MonoBehaviour
         }
         //baseTransform.GetComponent<Rigidbody>().mass = 1.4f;
     }
-
 
 
 }
