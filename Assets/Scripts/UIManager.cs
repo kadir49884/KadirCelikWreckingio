@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,14 +17,21 @@ public class UIManager : MonoBehaviour
         gameManager.GameWin += GameWin;
         gameManager.GameFail += GameFail;
     }
-    
+
     private void GameWin()
     {
-        gameWinPanel.gameObject.SetActive(true);
+        DOVirtual.DelayedCall(1, () =>
+        {
+            gameWinPanel.gameObject.SetActive(true);
+        });
+
     }
     private void GameFail()
     {
-        gameFailPanel.gameObject.SetActive(true);
+        DOVirtual.DelayedCall(1, () =>
+        {
+            gameFailPanel.gameObject.SetActive(true);
+        });
+
     }
-    
 }

@@ -86,12 +86,9 @@ public class SpawnerManager : Singleton<SpawnerManager>
     public void UpdateEnemyCount()
     {
         enemyCount--;
-        if (enemyCount < 1)
+        if (enemyCount < 1 && gameManager.RunGame)
         {
-            DOVirtual.DelayedCall(1, () =>
-             {
-                 GameManager.Instance.GameWin();
-             });
+            GameManager.Instance.GameWin();
         }
     }
 

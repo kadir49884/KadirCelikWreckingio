@@ -64,7 +64,7 @@ public class PlayerController : Singleton<PlayerController>
             {
                 PlayerMove();
             }
-            if (transform.position.y < -1)
+            if (transform.position.y < -1 && gameManager.RunGame)
             {
                 gameManager.GameFail();
             }
