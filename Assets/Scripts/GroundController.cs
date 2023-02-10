@@ -42,10 +42,10 @@ public class GroundController : MonoBehaviour
 
     IEnumerator WaitForGroundDown()
     {
-        groundCircle.gameObject.SetActive(true);
-        groundCircle.DOMoveY(-8, 3);
+        //groundCircle.gameObject.SetActive(true);
+        groundCircle.DOMoveY(-8, 3).SetEase(Ease.Linear);
         yield return new WaitForSeconds(7f);
-        groundCircle.DOMoveY(-20, 5);
+        groundCircle.DOMoveY(-10, 6).SetEase(Ease.Linear);
 
         for (int i = 0; i < groundLayerList[layerIndex].childCount; i++)
         {
