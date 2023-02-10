@@ -57,7 +57,6 @@ public class EnemyController : MonoBehaviour
 
     }
 
-
     private void Update()
     {
         if (transform.eulerAngles.z > 30 && transform.eulerAngles.z < 350)
