@@ -66,7 +66,7 @@ public class EnemyController : MonoBehaviour
             if (rotateTimer > 3)
             {
                 Quaternion toRot = Quaternion.Euler(new Vector3(0, transform.eulerAngles.y, 0));
-                transform.rotation = Quaternion.RotateTowards(transform.rotation, toRot, rotSpeed);
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, toRot, rotSpeed * 10);
                 if (rotateTimer > 5)
                 {
                     rotateTimer = 0;

@@ -14803,7 +14803,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EnemyController_Update_mD4EAAD97042453D8
 		float L_2 = L_1.___z_4;
 		if ((!(((float)L_2) > ((float)(30.0f)))))
 		{
-			goto IL_00af;
+			goto IL_00b8;
 		}
 	}
 	{
@@ -14815,7 +14815,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EnemyController_Update_mD4EAAD97042453D8
 		float L_5 = L_4.___z_4;
 		if ((!(((float)L_5) < ((float)(350.0f)))))
 		{
-			goto IL_00af;
+			goto IL_00b8;
 		}
 	}
 	{
@@ -14828,7 +14828,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EnemyController_Update_mD4EAAD97042453D8
 		float L_8 = __this->___rotateTimer_12;
 		if ((!(((float)L_8) > ((float)(3.0f)))))
 		{
-			goto IL_00af;
+			goto IL_00b8;
 		}
 	}
 	{
@@ -14845,7 +14845,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EnemyController_Update_mD4EAAD97042453D8
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_13;
 		L_13 = Quaternion_Euler_m5BCCC19216CFAD2426F15BC51A30421880D27B73_inline(L_12, NULL);
 		V_0 = L_13;
-		// transform.rotation = Quaternion.RotateTowards(transform.rotation, toRot, rotSpeed);
+		// transform.rotation = Quaternion.RotateTowards(transform.rotation, toRot, rotSpeed * 10);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_14;
 		L_14 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_15;
@@ -14856,14 +14856,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EnemyController_Update_mD4EAAD97042453D8
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_17 = V_0;
 		float L_18 = __this->___rotSpeed_18;
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_19;
-		L_19 = Quaternion_RotateTowards_m50EF9D609C80CD423CDA856EA3481DE2004633A3_inline(L_16, L_17, L_18, NULL);
+		L_19 = Quaternion_RotateTowards_m50EF9D609C80CD423CDA856EA3481DE2004633A3_inline(L_16, L_17, ((float)il2cpp_codegen_multiply(L_18, (10.0f))), NULL);
 		NullCheck(L_14);
 		Transform_set_rotation_m61340DE74726CF0F9946743A727C4D444397331D(L_14, L_19, NULL);
 		// if (rotateTimer > 5)
 		float L_20 = __this->___rotateTimer_12;
 		if ((!(((float)L_20) > ((float)(5.0f)))))
 		{
-			goto IL_00af;
+			goto IL_00b8;
 		}
 	}
 	{
@@ -14871,7 +14871,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EnemyController_Update_mD4EAAD97042453D8
 		__this->___rotateTimer_12 = (0.0f);
 	}
 
-IL_00af:
+IL_00b8:
 	{
 		// if (enemyLineRenderer)
 		LineRenderer_tEFEF960672DB69CB14B6D181FAE6292F0CF8B63D* L_21 = __this->___enemyLineRenderer_19;
@@ -14880,7 +14880,7 @@ IL_00af:
 		L_22 = Object_op_Implicit_m93896EF7D68FA113C42D3FE2BC6F661FC7EF514A(L_21, NULL);
 		if (!L_22)
 		{
-			goto IL_00ea;
+			goto IL_00f3;
 		}
 	}
 	{
@@ -14902,7 +14902,7 @@ IL_00af:
 		LineRenderer_SetPosition_m84C4AD9ADC6AC62B33DB4D7E4C9F066DFF8440C1(L_26, 1, L_28, NULL);
 	}
 
-IL_00ea:
+IL_00f3:
 	{
 		// }
 		return;
